@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <h1 class="H1Title">Filtración Nombres:</h1>
+
+      <ul class="Tables">
+        <li *ngFor="let nombre of nombres">{{nombre}}</li>
+      </ul>
+
+    <div class="Container">
+      <input class="Inputs" type="text" #nombreFiltrado placeholder="Ingrese el nombre">
+    <button class="Buttons" (click)="filtrarNombre(nombreFiltrado.value)">buscar nombre</button>
+    </div>
+
+    <p class= "Paragraph" *ngIf="nombre2">Resultado: {{nombre2}}</p>
+
+  </body>
+
+</html>
